@@ -6,24 +6,26 @@
     .get()
     .then(querySnapshot => {
       querySnapshot.forEach(doc => {
-        var first = doc.data().first;
-        var last = doc.data().last;
-        var full = first + last;
+        var name = doc.data().name;
+        var title = doc.data().title;
 
         var signlePerson = document.createElement("div");
+        signlePerson.className = "person";
         var info = document.createElement("p");
-        info.innerText = "Firstname: " + first + "  Lastname: " + last;
+        info.innerText = "Name: " + name + " Title: " + title;
+
         signlePerson.append(info);
-        gallery.append(signlePerson);
+
         storageRef
-          .child("images/" + full)
+          .child("images/" + name + title)
           .getDownloadURL()
           .then(function(url) {
             var img = document.createElement("img");
             img.src = url;
 
-            gallery.append(img);
+            signlePerson.append(img);
           });
+        gallery.append(signlePerson);
       });
     });
 })();
