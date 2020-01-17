@@ -60,24 +60,32 @@
 
   //add event listener for button
   submitBtn.addEventListener("click", e => {
+    // get the input data from user
     var user = name.value;
     var picTitle = title.value;
+
+    // if collection "users" doesn't exist, firebase will create one
+    // otherwise it will add entry to the collection "users"
     db.collection("users")
       .add({
+        // name and title are fields here
         name: user,
         title: picTitle
       })
+      // one signle entry is called document in firebase console
       .then(function(docRef) {
         console.log("Document written with ID: ", docRef.id);
       })
       .catch(function(error) {
         console.error("Error adding document: ", error);
       });
+    // construct picture name
     var full = user + picTitle;
     saveImage(full);
   });
 
   function saveImage(name) {
+    // change canvas data to Blob so it can be submitted
     canvas.toBlob(function(blob) {
       var image = new Image();
       image.src = blob;
@@ -86,6 +94,7 @@
       };
 
       storageRef
+        // create or access a folder called "images",and put the new image under that folder
         .child("images/" + name)
         .put(blob, metadata)
         .then(function(snapshot) {
