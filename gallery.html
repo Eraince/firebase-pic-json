@@ -3,17 +3,33 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Drawing app with firebase</title>
+    <title></title>
 
     <!-- Material Design Theming -->
-    <link rel="stylesheet" href="draw.css" />
+    <link rel="stylesheet" href="style/scene1.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.2/gsap.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase-storage.js"></script>
-    <script defer src="database-init.js"></script>
+    <script defer src="js/database-init.js"></script>
   </head>
   <body>
-    <div id="gallery"></div>
-    <script defer src="loadInfo.js"></script>
+    <canvas id="c"></canvas>
+    <div id="myProgress">
+      <div id="myBar"></div>
+    </div>
+    <audio id="surgery">
+      <source src="audio/first test.mp3" type="audio/mpeg" />
+    </audio>
+    <canvas id="introduction"></canvas>
+    <canvas id="preview"></canvas>
+    <canvas id="360sound"></canvas>
+
+    <video id="introVideo">
+      <source src="videos/ad.mp4" type="video/mp4" />
+    </video>
+    <!-- <video id="ending">
+      <source src="videos/end_@eraince.mp4" type="video/mp4" />
+    </video>  -->
+    <script defer src="js/loadInfo.js" type="module"></script>
   </body>
 </html>

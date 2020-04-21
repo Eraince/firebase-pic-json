@@ -1,0 +1,18 @@
+newmtl tinker:color__1024097505
+illum 4
+Kd 0.96 0.51 0.12
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl tinker:color__1026094196
+illum 4
+Kd 0.84 0.04 0.55
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl tinker:color__1032466725
+illum 4
+Kd 0.46 0.81 0.86
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00

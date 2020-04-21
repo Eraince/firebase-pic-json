@@ -1,0 +1,48 @@
+newmtl tinker1:color_40919
+illum 4
+Kd 0.00 0.62 0.84
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl tinker1:color_7720667
+illum 4
+Kd 0.46 0.81 0.86
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl tinker1:color_15708628
+illum 4
+Kd 0.94 0.69 0.83
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl tinker1:color_16089887
+illum 4
+Kd 0.96 0.51 0.12
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl tinker1:color_16768282
+illum 4
+Kd 1.00 0.87 0.10
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl tinker1:color__1023419110
+illum 4
+Kd 1.00 0.87 0.10
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl tinker1:color__1024097505
+illum 4
+Kd 0.96 0.51 0.12
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl tinker1:color__1035552951
+illum 4
+Kd 0.27 0.72 0.29
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
