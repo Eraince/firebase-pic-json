@@ -227,9 +227,9 @@ function addSolidGeometry(x, y, z, geometry, material, scene) {
 
 let sceneTracking = 0;
 function move() {
-  if (sceneTracking <= 5) {
+  if (sceneTracking <= 10) {
     var elem = document.getElementById("myBar");
-    elem.style.width = sceneTracking * 20 + "%";
+    elem.style.left = sceneTracking * 10 + "%";
   }
   sceneTracking++;
 

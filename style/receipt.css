@@ -1,0 +1,69 @@
+.draggable {
+  border: 1px solid black;
+  position: absolute;
+  overflow-x: hidden;
+  background: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#xxx {
+  width: 400px;
+  height: 200px;
+  top: 700px;
+  left: 200px;
+  border-radius: 100px / 50px;
+}
+
+#xxx2 {
+  width: 300px;
+  height: 200px;
+  top: 400px;
+  left: 800px;
+}
+
+#xxx3 {
+  width: 300px;
+  height: 200px;
+  top: 250px;
+  left: 1000px;
+}
+
+#xxx4 {
+  width: 300px;
+  height: 200px;
+  top: 500px;
+  left: 600px;
+}
+
+#picHolder {
+  width: 500px;
+}
+
+#picHolder img {
+  width: 100%;
+}
+.clip-ellipse {
+  clip-path: ellipse(240px 160px at 220px 170px);
+}
+
+.draggable::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.draggable::-webkit-scrollbar:vertical {
+  width: 11px;
+}
+
+.draggable::-webkit-scrollbar:horizontal {
+  height: 11px;
+}
+
+.draggable::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 2px solid white; /* should match background, can't be transparent */
+  background-color: rgba(0, 0, 0, 0.5);
+}

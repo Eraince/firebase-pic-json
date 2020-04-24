@@ -4,10 +4,10 @@ let img = new Image();
 var storageRef = firebase.storage().ref();
 img.setAttribute("crossOrigin", "");
 
-window.onload = function() {
+window.onload = function () {
   img.src =
     "https://firebasestorage.googleapis.com/v0/b/thisisatestfordrawing.appspot.com/o/images%2Famy?alt=media&token=ae5ad2cb-1f37-462d-b1f4-265c7a0f8e55";
-  img.onload = function() {
+  img.onload = function () {
     drawOnCanvas(this);
   };
 
@@ -16,19 +16,19 @@ window.onload = function() {
 
   document.addEventListener(
     "keydown",
-    event => {
+    (event) => {
       const code = event.keyCode;
 
       if (code === 38) {
-        this.console.log("here");
         saveEye();
+        window.location.href = "gallery.html";
       }
     },
     false
   );
 };
 
-const drawOnCanvas = img => {
+const drawOnCanvas = (img) => {
   let startX, startY, targetWidth, targetHeight;
 
   let imgWidth = img.width * 0.3;
@@ -41,11 +41,11 @@ const drawOnCanvas = img => {
   tracker = new tracking.ObjectTracker(["eye"]);
 
   tracker.setStepSize(1.7);
-  tracker.on("track", function(event) {
+  tracker.on("track", function (event) {
     if (event.data.length === 0) {
       console.log("nothing");
     }
-    event.data.forEach(function(d) {
+    event.data.forEach(function (d) {
       startX = d.x;
       startY = d.y;
       targetWidth = d.width;
@@ -63,20 +63,20 @@ const drawOnCanvas = img => {
 };
 
 const saveEye = () => {
-  eyeCanvas.toBlob(blob => {
+  eyeCanvas.toBlob((blob) => {
     eyePic = new Image();
     eyePic.src = blob;
     let metadata = {
-      contentType: "image/png"
+      contentType: "image/png",
     };
     storageRef
       .child("images/eyes")
       .put(blob, metadata)
-      .then(function(snapshot) {
+      .then(function (snapshot) {
         console.log("Uploaded", snapshot.totalBytes, "bytes.");
         // window.location.href = "generate.html";
       })
-      .catch(function(error) {
+      .catch(function (error) {
         console.error("Upload failed:", error);
       });
   });

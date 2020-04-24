@@ -4,12 +4,6 @@ body {
   margin: 0;
   padding: 0;
   overflow-y: hidden;
-
-  /* background: #57c5f9;
-  background: -moz-linear-gradient(top, #57c5f9 0%, #2467f2 100%);
-  background: -webkit-linear-gradient(top, #57c5f9 0%, #2467f2 100%);
-  background: linear-gradient(to bottom, #57c5f9 0%, #2467f2 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#11e8bb', endColorstr='#8200c9',GradientType=0 ); IE6-9 */
 }
 
 #c {
@@ -19,20 +13,41 @@ body {
 
 #myProgress {
   position: absolute;
-  top: 20px;
-  width: 80vh;
+  bottom: 5vh;
+  left: 5vw;
+  width: 90vw;
+  height: 2px;
+  background: white;
+  z-index: 3;
+}
+
+#start {
+  position: absolute;
+  bottom: 4vh;
+  left: 4vw;
+  width: 1vw;
   height: 2vh;
-  border-style: solid;
-  border-color: black;
-  transform: rotate(-90deg) translate(-60%, 5000%);
+  background: white;
+  z-index: 3;
+}
+
+#progress {
+  position: absolute;
+  bottom: 4vh;
+  right: 4vw;
+  width: 2vw;
+  height: 2vh;
+  background: white;
   z-index: 3;
 }
 
 #myBar {
-  width: 0%;
-  height: 100%;
+  position: relative;
+  width: 1vw;
+  height: 2vh;
+  left: 10px;
+  transform: translateY(-40%);
   background-color: white;
-  /* transform: translate(45%, 0) rotate(0.25turn); */
 }
 
 #introVideo {
